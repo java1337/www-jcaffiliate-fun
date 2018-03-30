@@ -1,31 +1,33 @@
 <html>
+
 <head>
-  <style>
-    #prizeContainer, #cookieMissing {
-      display: none;
-    }
-  </style>
+    <style>
+        #prizeContainer,
+        #cookieMissing {
+            display: none;
+        }
+    </style>
 </head>
+
 <body>
-  <div id="prizeContainer">
-    <h1>You are a winner!</h1>
-    <h2>Contact the Best Team to claim your prize!</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/zdA__2tKoIU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-  </div>
-  <div id="cookieMissing">
-    <h1>Prize cookie not present in request!</h1>
-    <h2>You are on the right track! Keep digging Hansel and Gretel.</h2>
-  </div>
-  <script>
-    var prizeCookieLocation = document.cookie.indexOf("prize=QmUgc3VyZSB0byBkcmluayB5b3VyIE92YWx0aW5lLg==");
-    var prizeCookieIsPresent = prizeCookieLocation >= 0;
-    if (prizeCookieIsPresent) {
-      document.getElementById("prizeContainer").style.display = "block";
-    } else {
-      document.getElementById("cookieMissing").style.display = "block";
-    }
-    // console.log(document.cookie + "<br>");
-    // console.log(prizeCookieLocation);
-  </script>
+    <div id="prizeContainer">
+        <h1>You are a winner!</h1>
+        <h2>Contact the Best Team to claim your prize!</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/zdA__2tKoIU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    <div id="cookieMissing">
+        <h1>Prize cookie not present in request!</h1>
+        <h2>You are on the right track! Keep digging Hansel and Gretel.</h2>
+    </div>
+    <script>
+        var prizeCookieLocation = document.cookie.indexOf("prize=QmUgc3VyZSB0byBkcmluayB5b3VyIE92YWx0aW5lLg==");
+        var prizeCookieIsPresent = prizeCookieLocation >= 0;
+        if (prizeCookieIsPresent) {
+            document.getElementById("prizeContainer").style.display = "block";
+        } else {
+            document.getElementById("cookieMissing").style.display = "block";
+        }
+    </script>
 </body>
+
 </html>
