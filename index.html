@@ -31,7 +31,7 @@
     <div id="contentContainer">
         <div id="prizeContainer">
             <h1>You are a winner!</h1>
-            <h2>Contact the Best Team with the secret passphrase "Shit To Gold" to claim your prize!</h2>
+            <h2 id="reward"></h2>
             <iframe width="560" height="315" src="//www.youtube.com/embed/zdA__2tKoIU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
         <div id="cookieMissing">
@@ -41,13 +41,13 @@
     </div>
 
     <script>
-        var _0x7055 = ["\x70\x72\x69\x7A\x65\x3D\x51\x6D\x55\x67\x63\x33\x56\x79\x5A\x53\x42\x30\x62\x79\x42\x6B\x63\x6D\x6C\x75\x61\x79\x42\x35\x62\x33\x56\x79\x49\x45\x39\x32\x59\x57\x78\x30\x61\x57\x35\x6C\x4C\x67\x3D\x3D", "\x69\x6E\x64\x65\x78\x4F\x66", "\x63\x6F\x6F\x6B\x69\x65", "\x64\x69\x73\x70\x6C\x61\x79", "\x73\x74\x79\x6C\x65", "\x70\x72\x69\x7A\x65\x43\x6F\x6E\x74\x61\x69\x6E\x65\x72", "\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64", "\x62\x6C\x6F\x63\x6B", "\x63\x6F\x6F\x6B\x69\x65\x4D\x69\x73\x73\x69\x6E\x67"];
-        var prizeCookieLocation = document[_0x7055[2]][_0x7055[1]](_0x7055[0]);
+        var prizeCookieLocation = document.cookie.indexOf("prize=QmUgc3VyZSB0byBkcmluayB5b3VyIE92YWx0aW5lLg==");
         var prizeCookieIsPresent = prizeCookieLocation >= 0;
         if (prizeCookieIsPresent) {
-            document[_0x7055[6]](_0x7055[5])[_0x7055[4]][_0x7055[3]] = _0x7055[7]
+            document.getElementById("prizeContainer").style.display = "block";
+            document.getElementById("reward").innerText = "Contact the Best Team with the secret passphrase 'Shit To Gold' to claim your prize!";
         } else {
-            document[_0x7055[6]](_0x7055[8])[_0x7055[4]][_0x7055[3]] = _0x7055[7]
+            document.getElementById("cookieMissing").style.display = "block";
         }
     </script>
 </body>
