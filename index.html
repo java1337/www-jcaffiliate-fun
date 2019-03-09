@@ -81,16 +81,16 @@
         function displayCookies() {
             var fname = getCookie("firstname");
             if (fname == null) { fname = ""; }
-            if (fname != "") { fname = "firstname=" + fname; }
+            if (fname == "") { fname = "Unknown" }
             var lname = getCookie("lastname");
             if (lname == null) { lname = ""; }
-            if (lname != "") { lname = "lastname=" + lname; }
+            if (lname == "") { lname = "Somebody" }
             var birthday = getCookie("birthday");
             if (birthday == null) { birthday = "dunno?"; }
-            if (birthday != "") { birthday = "birthday=" + birthday; }
+            if (birthday == "") { birthday = "birthday=" + birthday; }
             var nickname = getCookie("nickname");
             if (nickname == null) { nickname = ""; }
-            if (nickname != "") { nickname = "nickname=" + nickname; }
+            if (nickname == "") { nickname = "Fooey" }
             alert(fname + " " + lname + " aka " + nickname + " was born " + birthday);
         }
         function getCookie(name) {
